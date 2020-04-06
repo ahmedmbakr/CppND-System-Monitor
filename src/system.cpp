@@ -19,7 +19,7 @@ using std::vector;
 Processor& System::Cpu() 
 { 
     auto cpuUtilizations = LinuxParser::CpuUtilization();
-    //assert(cpuUtilizations.size() == 10);
+    assert(cpuUtilizations.size() == 10);
     this->cpu_.SetCpuUtilizations(cpuUtilizations);
     this->cpu_.Utilization();
 
