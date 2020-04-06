@@ -17,7 +17,14 @@ class Process {
   bool operator<(Process const& a) const;  // TODO: See src/process.cpp
 
   // TODO: Declare any necessary private members
+    friend class System;
  private:
+    int pid_;
+    std::string user_;
+    std::string command_;
+    float cpuUtilization_;
+    std::string ram_;
+    long int upTime_;
 };
 
 #endif
